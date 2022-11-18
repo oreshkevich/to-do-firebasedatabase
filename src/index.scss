@@ -1,0 +1,159 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: 'Roboto';
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: cover;
+  background-color: #fff;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+@function vw($value, $base: 1920) {
+  @return calc($value / $base) * 100vw;
+}
+
+@function vh($value, $base: 1080) {
+  @return calc($value / $base) * 100vh;
+}
+
+$baseFontSize: 16;
+@function rem($pixels, $context: $baseFontSize) {
+  @if (unitless($pixels)) {
+    $pixels: $pixels * 1px;
+  }
+
+  @if (unitless($context)) {
+    $context: $context * 1px;
+  }
+
+  @return $pixels / $context * 1rem;
+}
+
+.app .item-todo {
+  padding: 14px;
+  width: 250px;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 15px;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.app .item-todo .item-text {
+  cursor: pointer;
+}
+
+.app input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  background: transparent;
+}
+
+.app button {
+  margin-top: 10px;
+  padding: 16px 27px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.app .item-todo .item-delete {
+  display: block;
+  cursor: pointer;
+  float: right;
+  font-size: 22px;
+  position: relative;
+  left: -4px;
+  bottom: 0px;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: red;
+}
+
+.form__label {
+  display: flex;
+  align-items: center;
+}
+
+.app {
+  background: #abe4d8;
+  border-radius: 20px 20px;
+  padding: 30px;
+  width: 370px;
+}
+
+input {
+  min-width: 305px;
+}
+
+.app .item-delete {
+  padding: 5px 18px;
+  background: #814cb9;
+  border-radius: 15px;
+}
+
